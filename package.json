@@ -1,0 +1,19 @@
+{
+  "name": "mars-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/html/index.html",
+    "build": "parcel build ./src/html/index.html --public-url ./ --out-dir docs --no-cache"
+  },
+  "keywords": [],
+  "author": "Tomasz Bujnicki",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "sass": "^1.33.0"
+  }
+}
