@@ -8,23 +8,58 @@
   </head>
 
   <body>
+    <header id="top">
+      <div class="top-info">
+        <span class="logo">MARS</span>
+        <div class="phone">
+          <img src="../img/phone.png" />
+          <p class="paragraph">+01 234 567 890</p>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="dots">
+          <button class="dots__dot active"></button>
+          <button class="dots__dot"></button>
+          <button class="dots__dot"></button>
+          <button class="dots__dot"></button>
+        </div>
+        <article>
+          <h1 class="heading">PHANTOM</h1>
+          <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+            Quisque eget euismod dolor.
+          </p>
+        </article>
+      </div>
+      <div class="scroll"><p>Scroll down</p></div>
+      <svg class="circle">
+        <circle cx="60%" cy="50%" r="22%"stroke-width="0" fill="white" />
+      </svg> 
+      <div class="image image--0 image--active"></div>
+      <div class="image image--1"></div>
+      <div class="image image--2"></div>
+      <div class="image image--3"></div>
+    </header>
+
+    <!-- <nav class="nav-fixed"><p>BUY NOW</p></nav> -->
+
     <section id="fly" class="section-fly">
       <div class="square">
         <div class="content">
-          <h2>Tap to fly</h2>
-          <p>Fly wherever you want</p>
+          <h2 class="heading heading--no-margin">Tap to fly</h2>
+          <p class="paragraph">Fly wherever you want</p>
         </div>
       </div>
       <div class="rect">
-        <h2>
+        <h2 class="heading white">
           Fly higher<br />
           than before
         </h2>
-        <button>VIEW MORE</button>
+        <button class="button">VIEW MORE</button>
       </div>
     </section>
     <section id="features" class="section-features">
-      <h2>Features</h2>
+      <h2 class="heading">Features</h2>
       <ul>
         <li><img src="../img/features-1.png" /><span>New technology</span></li>
         <li><img src="../img/features-2.png" /><span>Good signal</span></li>
@@ -35,27 +70,29 @@
     <section id="vision" class="section-vision">
       <div class="screen"></div>
       <div class="new-vision">
-        <h2>New <span>generation</span><br />of vision<span>.</span></h2>
-        <button>VIEW MORE</button>
+        <h2 class="heading heading--bigger white">
+          New <span>generation</span><br />of vision<span>.</span>
+        </h2>
+        <button class="button button--transparent-bg">VIEW MORE</button>
       </div>
     </section>
     <section id="flying" class="section-flying">
       <div>
-        <h2>New <span>generation</span><br />of flying<span>.</span></h2>
-        <button>PRODUCTS</button>
+        <h2 class="heading heading--bigger">New <span>generation</span><br />of flying<span>.</span></h2>
+        <button class="button">PRODUCTS</button>
       </div>
     </section>
     <section id="journey" class="section-journey">
       <div>
-        <h2>Start your journey.</h2>
-        <button>VIEW MORE</button>
+        <h2 class="heading heading--bigger white">Start your journey.</h2>
+        <button class="button button--transparent-text">VIEW MORE</button>
       </div>
     </section>
     <footer id="footer" class="footer">
       <div class="background">PHANTOM</div>
-      <p class="mars">MARS</p>
-      <p class="copyrights">Copyrights to the design: Symu.co</p>
-      <p class="copyrights">Coded by me.</p>
+      <h2 class="heading logo">MARS</h2>
+      <p class="paragraph">Copyrights to the design: Symu.co</p>
+      <p class="paragraph">Coded by me.</p>
     </footer>
     <script src="../js/index.js"></script>
   </body>

@@ -32,40 +32,89 @@ section {
   background-repeat: no-repeat;
 }
 
-button {
-  color: var(--second);
+.button {
+  color: #000000;
   cursor: pointer;
   padding: 10px 20px;
   border: 1px solid #3b3b3b;
   font-size: 18px;
   font-family: 'Montserrat';
   font-weight: 700;
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 30px;
+  box-sizing: border-box;
   @include for-mini-phone-under {
     font-size: 16px;
     padding: 8px 16px;
   }
-
   @include for-big-desktop-up {
     padding: 0.5vw 1vw;
     font-size: 0.9vw;
     border-radius: 1.5vw;
   }
-}
 
-button:hover {
-  background-color: red;
-}
+  &--transparent-bg {
+    color: #fff;
+    background-color: transparent;
+  }
 
-button:focus,
-input:focus {
-  outline-width: 1px;
-  outline-style: solid;
-  outline-color: var(--first);
-  outline-offset: 4px;
+  &--transparent-text {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid transparent;
+    mix-blend-mode: screen;
+  }
+
+  &:hover {
+    background-color: #ff343d;
+    color: #fff;
+    mix-blend-mode: normal;
+    border: 1px solid #3b3b3b;
+  }
 }
 
 ul {
   list-style: none;
+}
+
+.heading {
+  font-size: 10vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+
+  @include for-tablet-portrait-up {
+    font-size: 5vw;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 3vw;
+  }
+
+  &--bigger {
+    font-size: 9.2vw;
+    font-weight: 500;
+    @include for-tablet-portrait-up {
+      font-size: 4.6vw;
+    }
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+}
+
+.paragraph {
+  color: #92a1a5;
+  font-size: 2.33vw;
+  font-weight: bold;
+
+  @include for-tablet-portrait-up {
+    font-size: 1.16vw;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 0.7vw;
+  }
+}
+
+.white {
+  color: #ffffff;
 }

@@ -2,31 +2,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  h2 {
-    font-size: 10vw;
-    font-weight: bold;
-
-    @include for-tablet-portrait-up {
-      font-size: 5vw;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 3vw;
-    }
-  }
-
-  p {
-    color: #92a1a5;
-    font-size: 2.33vw;
-    font-weight: bold;
-
-    @include for-tablet-portrait-up {
-      font-size: 1.16vw;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 0.7vw;
-    }
-  }
-
   .rect {
     display: flex;
     flex-direction: column;
@@ -36,16 +11,6 @@
     overflow: hidden;
     background-image: linear-gradient(rgba(#000, 0.6) 0 100%),
       url(../img/view-from-drone.png);
-
-    button {
-      color: #000;
-      background-color: #fff;
-      border: none;
-    }
-    h2 {
-      color: #ffffff;
-      margin-bottom: 2vw;
-    }
 
     @include for-phone-only {
       padding: 20vw 0;
@@ -153,13 +118,14 @@
       }
 
       img {
-        height: 20vw;
+        height: 15vw;
         width: auto;
+        margin-bottom: 2vw;
         @include for-tablet-portrait-up {
-          height: 15vw;
+          height: 9vw;
         }
         @include for-tablet-landscape-up {
-          height: 10vw;
+          height: 4.5vw;
         }
       }
 
@@ -211,46 +177,33 @@
 
   .new-vision {
     background-color: rgb(35, 35, 35);
-    h2 {
-      color: #ffffff;
-      font-size: 9.2vw;
-      font-weight: 500;
-      margin-bottom: 2vw;
-      @include for-tablet-portrait-up {
-        font-size: 4.6vw;
-      }
-    }
+    background-image: url(../img/drone-transparent.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 170% 50%;
   }
 }
 
 .section-flying {
   display: flex;
   height: 60vw;
-  background-image: url(../img/drone.png);
+  background-image: url(../img/drone-0.png);
   background-position: right 65%;
   background-size: 50%;
   padding-left: 5%;
   padding-top: 5%;
-  h2 {
-    color: rgb(35, 35, 35);
-    font-size: 9.2vw;
-    font-weight: 500;
-    margin-bottom: 2vw;
-  }
+
   span {
     color: #ff343d;
-  }
-  button {
-    color: rgb(0, 0, 0);
   }
   @include for-tablet-portrait-up {
     align-items: center;
     height: 43vw;
     padding-top: 0;
-    background-position: right 50%;
-    h2 {
+    background-position: 112% 50%;
+    /*     h2 {
       font-size: 4.6vw;
-    }
+    } */
   }
 }
 
@@ -267,25 +220,6 @@
     height: 100%;
     padding-bottom: 5vw;
   }
-
-  h2 {
-    margin-bottom: 2vw;
-    font-size: 9.2vw;
-    color: #fff;
-    @include for-tablet-portrait-up {
-      font-size: 6.9vw;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 4.6vw;
-    }
-  }
-
-  button {
-    color: #000;
-    background-color: #fff;
-    border: 0;
-    mix-blend-mode: screen;
-  }
 }
 
 .footer {
@@ -294,7 +228,6 @@
   justify-content: center;
   align-items: center;
   height: 27vw;
-  background: #fff;
 
   .background {
     position: absolute;
@@ -302,41 +235,142 @@
     font-weight: 700;
     text-shadow: 0px 16px 95px rgba(0, 0, 0, 0.15);
     color: #fff;
+    z-index: -1;
   }
-  .mars {
-    font-size: 5vw;
-    font-weight: bold;
-    position: relative;
-    &::after {
-      content: '';
-      border-style: solid;
-      border-color: rgb(255, 52, 61);
-      border-radius: 50%;
-      background-color: rgb(255, 255, 255);
-      position: absolute;
-      border-width: 0.664vw;
-      width: 1.33vw;
-      height: 1.33vw;
-      top: -0.3vw;
-      @include for-tablet-landscape-up {
-        border-width: 0.4vw;
-        width: 0.8vw;
-        height: 0.8vw;
-      }
-    }
+}
 
+.logo {
+  margin-right: 2vw;
+  font-size: 5vw;
+  font-weight: bold;
+  position: relative;
+  &::after {
+    content: '';
+    border-style: solid;
+    border-color: rgb(255, 52, 61);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-width: 0.664vw;
+    width: 1.33vw;
+    height: 1.33vw;
+    top: -0.3vw;
     @include for-tablet-landscape-up {
-      font-size: 3vw;
+      border-width: 0.4vw;
+      width: 0.8vw;
+      height: 0.8vw;
+    }
+    @include for-desktop-up {
+      border-width: 0.16vw;
+      width: 0.32vw;
+      height: 0.32vw;
+      top: -0.1vw;
     }
   }
 
-  .copyrights {
-    z-index: 100;
-    color: #92a1a5;
-    font-size: 2.33vw;
-    font-weight: bold;
-    @include for-tablet-landscape-up {
-      font-size: 0.7vw;
+  @include for-tablet-landscape-up {
+    font-size: 3vw;
+  }
+  @include for-desktop-up {
+    font-size: 1.2vw;
+  }
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5vh 5vw;
+  background-image: linear-gradient(90deg, #eff2f6 61%, #ff343d 0);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  overflow: hidden;
+  .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/drone-0.png);
+    background-position: 75% 50%;
+    background-size: 60%;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+
+    &--active {
+      opacity: 1;
+    }
+    &--1 {
+      background-image: url(../img/drone-1.png);
+    }
+    &--2 {
+      background-image: url(../img/drone-2.png);
+    }
+    &--3 {
+      background-image: url(../img/drone-3.png);
     }
   }
+
+  .circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+.top-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.phone {
+  img {
+    margin-right: 0.2vw;
+  }
+  p {
+    display: inline-block;
+  }
+}
+
+.slider {
+  display: flex;
+  margin-left: 2vw;
+  z-index: 10;
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
+
+  &__dot {
+    border: none;
+    width: 0.6vw;
+    height: 0.6vw;
+    background-color: #92a1a5;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0.5vw;
+    cursor: pointer;
+    &:hover {
+      background-color: #ff343d;
+    }
+  }
+}
+.active {
+  background-color: #ff343d;
+}
+
+.scroll {
+  width: max-content;
+  margin-left: 2vw;
+  margin-bottom: 2vw;
+  font-size: 0.9vw;
+  font-weight: bold;
+  transform: rotate(-90deg);
 }
