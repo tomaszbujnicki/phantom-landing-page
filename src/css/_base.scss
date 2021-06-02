@@ -2,9 +2,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: var(--second);
   font-family: 'Montserrat';
-  color: #000000;
+  color: var(--first);
   align-items: center;
   width: 100%;
 }
@@ -20,27 +20,27 @@ div {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: var(--second);
+  color: var(--first);
 }
 
 section {
-  background-color: #ffffff;
+  background-color: var(--second);
   font-family: 'Montserrat', sans-serif;
-  color: #000000;
+  color: var(--first);
   width: 100%;
   box-sizing: border-box;
   background-repeat: no-repeat;
 }
 
 .button {
-  color: #000000;
+  color: var(--first);
   cursor: pointer;
   padding: 10px 20px;
   border: 1px solid #3b3b3b;
   font-size: 18px;
   font-family: 'Montserrat';
   font-weight: 700;
-  background-color: #fff;
+  background-color: var(--second);
   border-radius: 30px;
   box-sizing: border-box;
   @include for-mini-phone-under {
@@ -54,20 +54,20 @@ section {
   }
 
   &--transparent-bg {
-    color: #fff;
+    color: var(--second);
     background-color: transparent;
   }
 
   &--transparent-text {
-    color: #000;
-    background-color: #fff;
+    color: var(--first);
+    background-color: var(--second);
     border: 1px solid transparent;
     mix-blend-mode: screen;
   }
 
   &:hover {
-    background-color: #ff343d;
-    color: #fff;
+    background-color: var(--highlighted);
+    color: var(--second);
     mix-blend-mode: normal;
     border: 1px solid #3b3b3b;
   }
@@ -116,5 +116,9 @@ ul {
 }
 
 .white {
-  color: #ffffff;
+  color: var(--second);
+}
+
+.highlighted {
+  color: var(--highlighted);
 }

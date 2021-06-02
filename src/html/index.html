@@ -16,29 +16,44 @@
           <p class="paragraph">+01 234 567 890</p>
         </div>
       </div>
+      <div class="scroll"><p>Scroll down</p></div>
+
       <div class="slider">
-        <div class="dots">
-          <button class="dots__dot active"></button>
-          <button class="dots__dot"></button>
-          <button class="dots__dot"></button>
-          <button class="dots__dot"></button>
+        <div class="dots slider__nav">
+          <button class="dots__dot slider__element active"></button>
+          <button class="dots__dot slider__element"></button>
+          <button class="dots__dot slider__element"></button>
+          <button class="dots__dot slider__element"></button>
         </div>
-        <article>
+        <article class="slider__text">
           <h1 class="heading">PHANTOM</h1>
-          <p class="paragraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Quisque eget euismod dolor.
+          <p class="paragraph slider__element active">
+            Visionary Intelligence.<br />
+            Powerful Flight Performance
+          </p>
+          <p class="paragraph slider__element">
+            Professional 4K Video<br />
+            Precise Mechanical Shutter
+          </p>
+          <p class="paragraph slider__element">
+            Powerful Aerial Performance<br />
+            Incredible Gimbal Camera
+          </p>
+          <p class="paragraph slider__element">
+            Intelligent Flight Modes<br />
+            Comprehensive Flight Safety
           </p>
         </article>
+        <div class="slider__background">
+          <svg class="circle">
+            <circle cx="60%" cy="50%" r="22%" stroke-width="0" fill="white" />
+          </svg>
+          <div class="image image--0 slider__element active"></div>
+          <div class="image image--1 slider__element"></div>
+          <div class="image image--2 slider__element"></div>
+          <div class="image image--3 slider__element"></div>
+        </div>
       </div>
-      <div class="scroll"><p>Scroll down</p></div>
-      <svg class="circle">
-        <circle cx="60%" cy="50%" r="22%"stroke-width="0" fill="white" />
-      </svg> 
-      <div class="image image--0 image--active"></div>
-      <div class="image image--1"></div>
-      <div class="image image--2"></div>
-      <div class="image image--3"></div>
     </header>
 
     <!-- <nav class="nav-fixed"><p>BUY NOW</p></nav> -->
@@ -71,14 +86,16 @@
       <div class="screen"></div>
       <div class="new-vision">
         <h2 class="heading heading--bigger white">
-          New <span>generation</span><br />of vision<span>.</span>
+          New <span class="highlighted">generation</span><br />of vision<span class="highlighted">.</span>
         </h2>
         <button class="button button--transparent-bg">VIEW MORE</button>
       </div>
     </section>
     <section id="flying" class="section-flying">
       <div>
-        <h2 class="heading heading--bigger">New <span>generation</span><br />of flying<span>.</span></h2>
+        <h2 class="heading heading--bigger">
+          New <span class="highlighted">generation</span><br />of flying<span class="highlighted">.</span>
+        </h2>
         <button class="button">PRODUCTS</button>
       </div>
     </section>
