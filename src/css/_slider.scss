@@ -38,6 +38,7 @@
   &__text {
     width: 100%;
     position: relative;
+    z-index: 2;
     & > .slider__element {
       position: absolute;
       opacity: 0;

@@ -184,26 +184,68 @@
   display: flex;
   height: 60vw;
   background-image: url(../img/drone-0.png);
-  background-position: right 65%;
+  background-position: 112% 70%;
   background-size: 50%;
   padding-left: 5%;
   padding-top: 5%;
+  animation-name: animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 
+  @keyframes animation {
+    0% {
+      background-position: 112% 70%;
+    }
+    5% {
+      background-position: 112% 70%;
+    }
+    50% {
+      background-position: 100% 70%;
+    }
+    55% {
+      background-position: 100% 70%;
+    }
+    100% {
+      background-position: 112% 70%;
+    }
+  }
   @include for-tablet-portrait-up {
     align-items: center;
     height: 43vw;
     padding-top: 0;
     background-position: 112% 50%;
-    /*     h2 {
-      font-size: 4.6vw;
-    } */
+    @keyframes animation {
+      0% {
+        background-position: 112%;
+      }
+      5% {
+        background-position: 112%;
+      }
+      50% {
+        background-position: 100%;
+      }
+      55% {
+        background-position: 100%;
+      }
+      100% {
+        background-position: 112%;
+      }
+    }
   }
 }
 
 .section-journey {
   height: 60vw;
   background-image: url(../img/journey.png);
-  background-size: cover;
+  background-size: 102%;
+  background-position: 35% 35%;
+  transition: background 1s;
+  &:hover {
+    background-size: 150%;
+    background-position: 100% 0;
+    transition: background-size 2s ease-in-out, background-position 3s ease-in-out 0.8s;
+  }
 
   div {
     display: flex;
