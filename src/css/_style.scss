@@ -236,7 +236,7 @@
 }
 
 .section-journey {
-  height: 60vw;
+  height: min(60vw, 100vh);
   background-image: url(../img/journey.png);
   background-size: 102%;
   background-position: 35% 35%;
