@@ -10,10 +10,18 @@
     flex-grow: 1;
     overflow: hidden;
     background-image: linear-gradient(rgba(#000, 0.6) 0 100%),
-      url(../img/view-from-drone.png);
+      url(../img/view-from-drone-phone.jpg);
 
     @include for-phone-only {
       padding: 20vw 0;
+    }
+    @include for-tablet-portrait-up {
+      background-image: linear-gradient(
+          90deg,
+          rgba(#000, 0.6) 0 40%,
+          transparent 0 100%
+        ),
+        url(../img/view-from-drone-portrait.jpg);
     }
 
     @include for-tablet-landscape-up {
@@ -24,7 +32,7 @@
           rgba(#000, 0.6) 0 40%,
           transparent 0 100%
         ),
-        url(../img/view-from-drone.png);
+        url(../img/view-from-drone-desktop.jpg);
 
       h2 {
         margin-left: 6%;
@@ -165,7 +173,7 @@
   }
 
   .screen {
-    background-image: url(../img/screen.png);
+    background-image: url(../img/screen.jpg);
     @include for-phone-only {
       height: 65vw;
     }
@@ -236,24 +244,35 @@
 }
 
 .section-journey {
-  height: min(60vw, 100vh);
-  background-image: url(../img/journey.png);
+  height: min(60vw, 100%);
+  background-image: url(../img/journey-1200.jpg);
   background-size: 102%;
   background-position: 35% 35%;
   transition: background 1s;
-  &:hover {
-    background-size: 150%;
-    background-position: 100% 0;
-    transition: background-size 2s ease-in-out, background-position 3s ease-in-out 0.8s;
+  @include for-desktop-up {
+    background-image: url(../img/journey-2000.jpg);
+    &:hover {
+      background-size: 150%;
+      background-position: 100% 0;
+      transition: background-size 2s ease-in-out,
+        background-position 3s ease-in-out 0.8s;
+    }
   }
 
   div {
     display: flex;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
+    padding-left: 5vw;
     height: 100%;
     padding-bottom: 5vw;
+    @include for-tablet-landscape-up {
+      padding-left: 0;
+
+      justify-content: flex-end;
+      flex-direction: column;
+    }
   }
 }
 
@@ -318,7 +337,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 5vh 5vw;
+  padding: 5% 5vw;
   background-image: linear-gradient(90deg, #eff2f6 61%, var(--highlighted) 0);
   background-repeat: no-repeat;
   box-sizing: border-box;

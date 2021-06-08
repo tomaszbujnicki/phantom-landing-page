@@ -1,11 +1,7 @@
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: var(--second);
   font-family: 'Montserrat';
   color: var(--first);
-  align-items: center;
   width: 100%;
   line-height: 1.25;
 }
@@ -36,9 +32,9 @@ section {
 .button {
   color: var(--first);
   cursor: pointer;
-  padding: 10px 20px;
   border: 1px solid #3b3b3b;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 8px 16px;
   font-family: 'Montserrat';
   font-weight: 700;
   background-color: var(--second);
@@ -47,6 +43,10 @@ section {
   @include for-mini-phone-under {
     font-size: 16px;
     padding: 8px 16px;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 18px;
+    padding: 10px 20px;
   }
   @include for-big-desktop-up {
     padding: 0.5vw 1vw;

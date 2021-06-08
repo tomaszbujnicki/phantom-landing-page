@@ -11,7 +11,8 @@
   "author": "Tomasz Bujnicki",
   "license": "ISC",
   "dependencies": {
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "swiper": "^6.7.0"
   },
   "devDependencies": {
     "sass": "^1.33.0"
