@@ -41,8 +41,3 @@
     activeId = i;
   }
 })();
-
-const slider = document.getElementById('slider');
-slider.addEventListener('touchstart', (event) => {
-  // touch event started
-});

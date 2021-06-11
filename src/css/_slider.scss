@@ -5,14 +5,34 @@
   width: 100%;
   height: 100%;
   padding-left: 7vw;
+  padding-bottom: 15vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  @include for-desktop-up {
+    align-items: center;
+  }
 
   &__nav {
-    z-index: 10;
-    & > .slider__element.active,
-    & > .slider__element:hover {
-      background-color: var(--highlighted);
+    display: none;
+    @include for-desktop-up {
+      display: flex;
+      flex-direction: column;
+      margin-right: 2vw;
+      z-index: 10;
+      & > .slider__element {
+        border: none;
+        width: 0.6vw;
+        height: 0.6vw;
+        background-color: #92a1a5;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0.5vw;
+        cursor: pointer;
+      }
+      & > .slider__element.active,
+      & > .slider__element:hover {
+        background-color: var(--highlighted);
+      }
     }
   }
 
